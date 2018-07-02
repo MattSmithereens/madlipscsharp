@@ -6,17 +6,30 @@ namespace Madlibs.Controllers
     public class HomeController : Controller
 
     {
+        //[Route("/")]
+        //public ActionResult Home()
+        //{
+        //    LetterVariable myLetterVariable = new LetterVariable();
+        //    return View(myLetterVariable);
+        //}
+
         [Route("/")]
-        public ActionResult Home()
+        public ActionResult Form()
+        {
+            return View();
+        }
+
+        [Route("/formLib")]
+        public ActionResult GreetingCard()
         {
             LetterVariable myLetterVariable = new LetterVariable();
-            myLetterVariable.SetName("Lina");
-            myLetterVariable.SetAnotherName("John");
-            myLetterVariable.SetAnimal("Lina");
-            myLetterVariable.SetExclamation("John");
-            myLetterVariable.SetVerb("Lina");
-            myLetterVariable.SetNoun("John");
-            return View(myLetterVariable);
+            myLetterVariable.SetName(Request.Query["Name"]);
+            myLetterVariable.SetAnotherName(Request.Query["AnotherName"]);
+            myLetterVariable.SetAnimal(Request.Query["Animal"]);
+            myLetterVariable.SetExclamation(Request.Query["Exclamation"]);
+            myLetterVariable.SetVerb(Request.Query["Verb"]);
+            myLetterVariable.SetNoun(Request.Query["Noun"]);
+            return View("Home", myLetterVariable);
         }
     }
 }
