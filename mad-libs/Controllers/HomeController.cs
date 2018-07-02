@@ -7,11 +7,15 @@ namespace Madlibs.Controllers
 
     {
         [Route("/")]
-        public ActionResult Hello()
+        public ActionResult Home()
         {
             LetterVariable myLetterVariable = new LetterVariable();
-            myLetterVariable.SetRecipient("Lina");
-            myLetterVariable.SetSender("John");
+            myLetterVariable.SetName("Lina");
+            myLetterVariable.SetAnotherName("John");
+            myLetterVariable.SetAnimal("Lina");
+            myLetterVariable.SetExclamation("John");
+            myLetterVariable.SetVerb("Lina");
+            myLetterVariable.SetNoun("John");
             return View(myLetterVariable);
         }
     }

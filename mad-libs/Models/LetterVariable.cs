@@ -2,27 +2,74 @@
 {
     public class LetterVariable
     {
-        private string _recipient;
-        private string _sender;
+        private string _name;
+        private string _anotherName;
+        private string _animal;
+        private string _exclamation;
+        private string _verb;
+        private string _noun;
 
-        public string GetRecipient()
+        public string GetName()
         {
-            return _recipient;
+            return _name;
         }
 
-        public void SetRecipient(string newRecipient)
+        public void SetName(string newName)
         {
-            _recipient = newRecipient;
+            _name = newName;
         }
 
-        public string GetSender()
+        public string GetAnotherName()
         {
-            return _sender;
+            return _anotherName;
         }
 
-        public void SetSender(string newSender)
+        public void SetAnotherName(string newAnotherName)
         {
-            _sender = newSender;
+            _anotherName = newAnotherName;
         }
+
+        public string GetAnimal()
+        {
+            return _animal;
+        }
+
+        public void SetAnimal(string newAnimal)
+        {
+            _animal = newAnimal;
+        }
+
+        public string GetExclamation()
+        {
+            return _exclamation;
+        }
+
+        public void SetExclamation(string newExclamation)
+        {
+            _exclamation = newExclamation;
+        }
+
+        public string GetVerb()
+        {
+            return _verb;
+        }
+
+        public void SetVerb(string newVerb)
+        {
+            _verb = newVerb;
+        }
+
+        public string GetNoun()
+        {
+            return _noun;
+        }
+
+        public void SetNoun(string newNoun)
+        {
+            _noun = newNoun;
+        }
+
+
+
     }
 }

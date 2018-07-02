@@ -13,4 +13,8 @@
     <Folder Include="Models\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\Letter.cs" />
+    <None Remove="Views\Home\Hello.cshtml" />
+  </ItemGroup>
 </Project>
